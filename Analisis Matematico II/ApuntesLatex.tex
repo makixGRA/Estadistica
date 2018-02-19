@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % 
 % Apuntes de la asignatura Análisis Matemático II.
-% GRado en Estadística.
+% Grado en Estadística.
 % Universidad de Granada.
 % Curso 2017/18.
 % 
@@ -497,22 +497,68 @@
 % Introducción.
 % --------------------------------------------------------------------------------
 
-\section*{El espacio euclídeo y su topología}
+\section{El espacio euclídeo y su topología}
 Como punto de partida para el estudio de las funciones de varias variables reales, debemos
 familiarizarnos con la estructura y propiedades del espacio en el que dichas funciones tendrán
 su conjunto de definición, el espacio euclídeo n-dimensional, donde $n$ es un número natural.
 Al tiempo que estudiamos algunas propiedades de dicho espacio, las iremos abstrayendo, para
 entender ciertos conceptos generales que son importantes en Análisis Matemático.
-Partimos de la definición de $R^n$ y su estructura algebraica básica, la de espacio vectorial.
-Al estudiar el producto escalar en $R^n$ , completamos la definición del espacio euclídeo, así
+Partimos de la definición de $\R^n$ y su estructura algebraica básica, la de espacio vectorial.
+Al estudiar el producto escalar en $\R^n$ , completamos la definición del espacio euclídeo, así
 llamado porque formaliza analíticamente los axiomas y resultados de la geometría de Euclides.
 
 \begin{ndef}[Espacio euclídeo]
-	Definimos el espacio euclídeo n-dimensional como el conjunto $R^n = \{(x_1,...,x_n): x \in R, \forall i \in {1...n}\}$
+	Definimos el espacio euclídeo n-dimensional como el producto cartesiano de n copias de $\R$, es decir, el conjunto de
+	todas las posibles n-uplas de números reales: $\R^n = \R  \ \ x \ \ \R \ \ x \ \ {...}^{(n)} \ \ x \ \ \R = \{(x_1,...,x_n): x_i \in R, \forall i \in {1...n}\}$
 \end{ndef}
 
+Sin embargo, no siempre es conveniente usar subíndices para denotar las componentes de los
+elementos de $\R^n$, pues podemos necesitar los subíndices para otra finalidad. Para valores concretos de n, podemos denotar las componentes con
+letras diferentes, siendo habitual escribir:
+
+$$\R^2 = \{(x,y): x,y \in R\}$$
+$$\R^3 = \{(x,y,z): x,y,z \in R\}$$
+
+En $\R^n$ disponemos de las operaciones de suma y producto por escalares, definidas, para $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n) \in \R^n$ y $\lambda \in \R$, por $$x + y = (x_1+y_1,...,x_n+y_n)$$ $$\lambda x = (\lambda x_1,...,\lambda x_n)$$
+
+\begin{nprop}
+Sea $n \in \N, x,y,z \in \R^n, \alpha, \beta \in \R$. Entonces:
+
+$a) \ (x+y)+z = x + (y+z)$ (Propiedad asociativa) \\
+$b) \ 0 = (0,...,0) \in \R^n \implies x+0 = 0+x = x$ \\
+$c)$ \ Dado $x = (x_1,...,x_n) \implies \exists ! v \in \R^n: x+v=v+x=0 \implies v = (-x_1,...,-x_n) = -x$ \\
+$d) \ x+y = y+x$ \\
+$e) \ 1*x = x$ \\
+$f) \ (\lambda + \beta)x = \lambda x + \beta x$ \\
+$g) \ \lambda (x+y) = \lambda x + \lambda y$ \\
+$h) \ (\lambda \beta)y = \lambda (\beta y)$
+	
+\end{nprop}
 
 \newpage
+
+\begin{ndef}[Producto escalar]
+Sea $n \in \N$. Definimos el producto escalar de $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n) \in \R^n$ como $$ <x,y> = \sum_{i=1}^{n}x_i y_i$$
+\end{ndef}
+
+\begin{nprop}
+Sea $n \in \N$:
+
+$a) \ x,y,z \in \R^n \implies <x+y,z> = <x,z> + <y,z> \\
+b) \ x,y \in \R^n, \lambda \in \R \implies <\lambda x,y> = \lambda <x,y> \\
+c) \ <x,y> = <y,x> \ \forall x,y \in \R^n $
+\end{nprop}
+
+\begin{nprop}[Desigualdad de Cauchy-Schwartz]
+Sean $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n) \in \R^n$, entonces: $$(<x,y>)^2 \le (\sum_{i=1}^{n}x_i^2)(\sum_{i=1}^n y_i^2)$$ 
+\end{nprop}
+
+\begin{proof} \hfill \\
+ Para $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n)$, es cierto que $0 \le \sum_{i=1}^n (ax_i+y_i)^2 = \sum_{i=1}^n (a^2x_i^2+y_i^2+2ax_iy_i) = a^2(\sum_{i=1}^n x_i^2)+(\sum_{i=1}^n y_i^2)+2a (\sum_{i=1}^n x_iy_i)$ para todo número real y es igualdad si, y sólo si, cada término de la suma es cero. Esta desigualdad puede escribirse en la forma: $Ax^2 + Bx + C$ donde $A = \sum_{i=1}^n x_i^2, B = \sum_{i=1}^n x_iy_i, C = \sum_{i=1}^n y_i^2$. En particular, la desigualdad se cumple para $\frac{-B}{2A}$: \ $A(\frac{-B}{A})^2 + 2B(\frac{-B}{A}) + C \ge 0 \implies C \ge \frac{B^2}{2} \implies B^2 \le AC$.
+\end{proof}
+
+
+\section{}
 
 % --------------------------------------------------------------------------------
 % Convergencia uniforme y puntual.
@@ -528,19 +574,7 @@ llamado porque formaliza analíticamente los axiomas y resultados de la geometr�
 \begin{thebibliography}{9}
   \addcontentsline{toc}{section}{Referencias}
 
-\bibitem{marsden}
-  Jerrold E. Marsden, Michael  J. Hoffman.
-  \emph{Análisis Clásico Elemental}.
-  Addison Wesley,
-  2ª edición,
-  1998.
-
-\bibitem{rudin}
-  Walter Rudin.
-  \emph{Real and Complex Analysis}.
-  McGraw-Hill,
-  3ª edición,
-  1987.
+.
 
 \end{thebibliography}
 
