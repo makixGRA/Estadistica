@@ -497,7 +497,7 @@
 % Introducción.
 % --------------------------------------------------------------------------------
 
-\section{El espacio euclídeo y su topología}
+\section{El espacio euclídeo}
 Como punto de partida para el estudio de las funciones de varias variables reales, debemos
 familiarizarnos con la estructura y propiedades del espacio en el que dichas funciones tendrán
 su conjunto de definición, el espacio euclídeo n-dimensional, donde $n$ es un número natural.
@@ -561,12 +561,37 @@ Sean $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n) \in \R^n$, entonces: $$(<x,y
 Dado $n \in \N, x = (x_1,...,x_n) \in \R^n$, se define la norma de $x$ como: $$||x|| = \sqrt{\sum_{i=1}^{n}x_i^2} = \sqrt{<x,x>}$$
 \end{ndef}
 
+\begin{nprop}
+Sea $n \in \N, x,y \in \R^n, \lambda \in \R. \\
+a) \ ||x|| \ge 0 \land ||x|| = 0 \Leftrightarrow x = 0 \in \R^n \\
+b) \ ||\lambda x|| = |\lambda| ||x|| \\
+c) \ ||x+y|| \le ||x|| + ||y||$ (Desigualdad triangular)
+\end{nprop}
 
-\section{}
+\begin{proof}
+(Desigualdad triangular) \\ $||x+y||^2 = <x+y,x+y> = <x,x> + <x,y> + <y,x> + <y,y> = ||x||^2 + ||y||^2 + 2<x,y> \\ \le ||x||^2 + ||y||^2 + 2||x|| ||y|| = (||x||+||y||)^2$
+\end{proof}
 
-% --------------------------------------------------------------------------------
-% Convergencia uniforme y puntual.
-% --------------------------------------------------------------------------------
+\begin{ndef}[Distancia]
+Sea $n \in \N, x,y \in \R^n$, se define la distancia de $x$ a $y$ como $$d(x,y)= ||x-y||$$
+\end{ndef}
+
+\begin{nprop}
+Sea $n \in \N, x,y \in \R^n. \\
+a) \ d(x,y) \ge 0 \land d(x,y)=0 \Leftrightarrow x=y \\
+b) \ d(x,y)=d(y,x) \\
+c) \ d(x,z) \le d(x,y)+d(y,z)$
+\end{nprop}
+
+\section{Topología en $\R^n$}
+
+\begin{ndef}[Bola de centro a y radio r]
+Sea $n \in \N, a \in \R^n, r \ge 0.$ Se definen las bolas abiertas, cerradas y esferas, respectivamente, de centro a y radio r como: $$B(a,r) = \{x \in \R^n: d(x,y) < r\} $$ $$\overline{B}(a,r) = \{x \in \R^n: d(x,y) \leq r\} $$ $$S(a,r) = \{x \in \R^n: d(x,y) = r\}$$
+\end{ndef}
+
+\begin{ndef}[Sucesión convergente en $\R^n$]
+Sea $n \in \N$, y $\{x_n\}$ una sucesión convergente en $\R^n$. Diremos que $\{x_n\}$ es convergente hacia un límite $a \in \R^n$ si $$ \forall \epsilon \ge 0 \ \exists m \in \N: n \geq m \implies d(x,a) < \epsilon$$
+\end{ndef}
 
 
 
