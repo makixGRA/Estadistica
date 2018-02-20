@@ -557,6 +557,10 @@ Sean $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n) \in \R^n$, entonces: $$(<x,y
  Para $x = (x_1,...,x_n) \in \R^n, y = (y_1,...,y_n)$, es cierto que $0 \le \sum_{i=1}^n (ax_i+y_i)^2 = \sum_{i=1}^n (a^2x_i^2+y_i^2+2ax_iy_i) = a^2(\sum_{i=1}^n x_i^2)+(\sum_{i=1}^n y_i^2)+2a (\sum_{i=1}^n x_iy_i)$ para todo número real y es igualdad si, y sólo si, cada término de la suma es cero. Esta desigualdad puede escribirse en la forma: $Ax^2 + Bx + C$ donde $A = \sum_{i=1}^n x_i^2, B = \sum_{i=1}^n x_iy_i, C = \sum_{i=1}^n y_i^2$. En particular, la desigualdad se cumple para $\frac{-B}{2A}$: \ $A(\frac{-B}{A})^2 + 2B(\frac{-B}{A}) + C \ge 0 \implies C \ge \frac{B^2}{2} \implies B^2 \le AC$.
 \end{proof}
 
+\begin{ndef}[Norma]
+Dado $n \in \N, x = (x_1,...,x_n) \in \R^n$, se define la norma de $x$ como: $$||x|| = \sqrt{\sum_{i=1}^{n}x_i^2} = \sqrt{<x,x>}$$
+\end{ndef}
+
 
 \section{}
 
