@@ -86,6 +86,7 @@
 
 % Diseño de página.
 \usepackage{fancyhdr}   % Utilizado para hacer cabeceras y pies de página.
+
 \usepackage{titlesec} 	% Utilizado para hacer títulos propios.
 \usepackage{lastpage}   % Referencia a la última página.
 \usepackage{extramarks} % Marcas extras. Utilizado en pie de página y cabecera.
@@ -509,7 +510,7 @@ llamado porque formaliza analíticamente los axiomas y resultados de la geometr�
 
 \begin{ndef}[Espacio euclídeo]
 	Definimos el espacio euclídeo n-dimensional como el producto cartesiano de n copias de $\R$, es decir, el conjunto de
-	todas las posibles n-uplas de números reales: $\R^n = \R  \ \ x \ \ \R \ \ x \ \ {...}^{(n)} \ \ x \ \ \R = \{(x_1,...,x_n): x_i \in R, \forall i \in {1...n}\}$
+	todas las posibles n-uplas de números reales: $$\R^n = \R  \ \ x \ \ \R \ \ x \ \ {...}^{(n)} \ \ x \ \ \R = \{(x_1,...,x_n): x_i \in R, \forall i \in {1...n}\}$$
 \end{ndef}
 
 Sin embargo, no siempre es conveniente usar subíndices para denotar las componentes de los
@@ -586,15 +587,51 @@ c) \ d(x,z) \le d(x,y)+d(y,z)$
 \section{Topología en $\R^n$}
 
 \begin{ndef}[Bola de centro a y radio r]
-Sea $n \in \N, a \in \R^n, r \ge 0.$ Se definen las bolas abiertas, cerradas y esferas, respectivamente, de centro a y radio r como: $$B(a,r) = \{x \in \R^n: d(x,y) < r\} $$ $$\overline{B}(a,r) = \{x \in \R^n: d(x,y) \leq r\} $$ $$S(a,r) = \{x \in \R^n: d(x,y) = r\}$$
+Sea $n \in \N, a \in \R^n, r > 0.$ Se definen las bolas abiertas, cerradas y esferas, respectivamente, de centro a y radio r como: $$B(a,r) = \{x \in \R^n: d(x,y) < r\} $$ $$\overline{B}(a,r) = \{x \in \R^n: d(x,y) \leq r\} $$ $$S(a,r) = \{x \in \R^n: d(x,y) = r\}$$
 \end{ndef}
 
 \begin{ndef}[Sucesión convergente en $\R^n$]
-Sea $n \in \N$, y $\{x_n\}$ una sucesión convergente en $\R^n$. Diremos que $\{x_n\}$ es convergente hacia un límite $a \in \R^n$ si $$ \forall \epsilon \ge 0 \ \exists m \in \N: n \geq m \implies d(x,a) < \epsilon$$
+Sea $n \in \N$, y $\{x_n\}$ una sucesión convergente en $\R^n$. Diremos que $\{x_n\}$ es convergente hacia un límite $a \in \R^n$ si $$ \forall \epsilon > 0 \ \exists m \in \N: n \geq m \implies d(x_n,a) < \epsilon$$
 \end{ndef}
 
+\begin{nprop}
+Sea $n \in \N, x,y \in \R^n, \{x_n\},\{y_n\}$ dos sucesiones  en $\R^n$. \\
+$a) \ \{x_n\} \rightarrow x, \{x_n\} \rightarrow y \implies x = y \ $(Unicidad de límites) \\
+$b) \ \{x_n\} \rightarrow x, \{y_n\} \rightarrow y \implies \{x_n+y_n\} \rightarrow x+y \\
+c) \ \{x_n\} \rightarrow x, \lambda \in \R \implies \{\lambda x_n\} \rightarrow \lambda x \\
+d) \ \{x_n\} $ converge $ \implies \{x_n\} $ acotada. $(\exists M \in \N: ||x_n|| \le M \ \forall n \in N$) (Acotación)\\
+$e) \ \{x_n\} \rightarrow x, \{y_n\} \rightarrow y \implies \{<x_n,y_n>\} \rightarrow <x,y> \\
+f) \ \{x_n\} \rightarrow x \implies \{||x_n||\} \rightarrow ||x||$
+\end{nprop}
 
+\begin{proof}
+(Unicidad de límites) \\ Supongamos $\{x_n\} \rightarrow x, \{x_n\} \rightarrow y$. Fijo $\epsilon > 0$ y demuestro $||x-y|| < \epsilon \implies ||x-y|| = 0 \implies x=y$. \\
+Dado $\epsilon > 0, \{x_n\} \rightarrow x \implies \exists m_1 \in \N: ||x_n-x|| < \frac{\epsilon}{2} \ \forall n \ge m_1$ y $\exists m_2 \in \N: ||x_n-y|| < \frac{\epsilon}{2} \ \forall n \ge m_2$. Tomo $n \ge max \{m_1,m_2\} \implies ||x-y|| = ||(x-x_n)+(x_n-y)|| \le ||x_n-x||+||x_n-y|| < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \implies x=y$
+\end{proof}
 
+\begin{proof}
+(Acotación) \\ Supongamos $\{x_n\} \rightarrow x \implies \exists m \in \N: ||x_n-x|| < 1 \ \forall n \ge m \implies ||x_n|| \le 1+||x|| \implies ||x_n|| \in max\{||x_1||,||x_2||,...,||x_m||, 1+||x||=M\}$
+\end{proof}
+
+\begin{nprop}
+Sea $N \in \N$. Tomo $\{x_n\} \rightarrow x \in \R^N $con $x = (x^1,...,x^N), x_n = (x_n^1,...,x_n^N)$. Entonces $$\{(x_n^1,...,x_n^N)\} \rightarrow (x^1,...,x^N) \Leftrightarrow \{x_n^i\} \rightarrow x^i \ \forall i \in \{1...N\}$$
+\end{nprop}
+
+\begin{proof}
+ POR HACER
+\end{proof}
+
+\begin{ndef}[Interior, adherente y frontera]
+Sea $n \in \N, A \subseteq \R^n$. Entonces: \\
+a) Un punto $x \in \R^n$ es adherente a $A$ si $ \forall \epsilon > 0, B(x,\epsilon) \cap A \ne \varnothing \implies \overline{A} = \{x_n \in \R^n: x $ adherente a $A$\} y $A$ cerrado si $A = \overline{A}$. \\
+$b)$ Un punto $a \in A$ es interior a $A$ si $ \exists r > 0: B(a,r) \subseteq A$. Denotaremos $\mathring{A} = \{a \in A: a $ interior a $A$\} y $A$ abierto si $A = \mathring{A}. \\
+c)$ Un punto $x \in \R^n$ es frontera de $A$ si $x \in \overline{A}$ pero $x \not\in \mathring{A}$. Denotaremos $Fr(A) = \{x \in \R^n: x$ es frontera de $A\}$
+\end{ndef}
+
+\begin{ejemplo}.
+\\ $ a) \ A = [0,1[ \cup \{4\} \implies \overline{A} = [0,1] \cup \{4\}, \ \mathring{A} = ]0,1[, \ Fr(A) = \{0,1,4\} \\
+b) \ A = B(a,r) \implies \overline{A} = \overline{B}(a,r), \ \mathring{A} = A, \ Fr(A) = \overline{B}(a,r)- B(a,r)$ DEMOSTRAR
+\end{ejemplo}
 % --------------------------------------------------------------------------------
 % Bibliografía.
 % --------------------------------------------------------------------------------
