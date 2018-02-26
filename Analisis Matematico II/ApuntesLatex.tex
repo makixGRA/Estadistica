@@ -632,6 +632,52 @@ c)$ Un punto $x \in \R^n$ es frontera de $A$ si $x \in \overline{A}$ pero $x \no
 \\ $ a) \ A = [0,1[ \cup \{4\} \implies \overline{A} = [0,1] \cup \{4\}, \ \mathring{A} = ]0,1[, \ Fr(A) = \{0,1,4\} \\
 b) \ A = B(a,r) \implies \overline{A} = \overline{B}(a,r), \ \mathring{A} = A, \ Fr(A) = \overline{B}(a,r)- B(a,r)$ DEMOSTRAR
 \end{ejemplo}
+
+\begin{nprop}[Caracterización secuencial de la topología]
+Sea $n \in \N, A \subseteq \R^n$. Entonces: \\
+$a)$ Un punto $x \in \R^n$ es adherente a $A$ si $ \Leftrightarrow \exists \{x_n\} \rightarrow x: \{x_n\} \in A \ \forall n \in \N \\
+b) $ Un punto $a \in A$ es interior $ \Leftrightarrow \ \forall \{x_n\} \rightarrow a, x_n \in \R^n \implies \exists m \in \N: \ \forall n \ge m, \ x_n \in A \\
+c) $ Un punto $x \in \R^n$ es frontera de $A$ si $ \Leftrightarrow \exists \{x_n\} \rightarrow x: \{x_n\} \in A \ \forall n \in \N \land \{y_n\} \rightarrow x: \{y_n\} \not\in A \ \forall n \in \N $
+\end{nprop}
+
+\begin{proof}.
+(Apartado a) \\ $ \Rightarrow \\ \forall n \in \N \ \exists x_n \in B(x,\frac{1}{n}) \cap A$ por ser $x$ adherente $ \implies \{x_n\} \subseteq A$. Además, $d(x_n,x) \le \frac{1}{n} \land \{\frac{1}{n}\} \rightarrow 0 \implies \{x_n\} \rightarrow x. $ 
+
+$\Leftarrow \\ $ Sea $ \epsilon > 0, \{x_n\} \rightarrow x \implies \exists n \in \N: d(x_n,x) < \epsilon \implies x_n \in B(x,\epsilon) \ $y$ \ x_n \in A $ \ por hipótesis $ \implies x_n \in B(x,\epsilon) \cap A \ne \varnothing \implies x \in \overline{A}$. \\
+\end{proof}
+
+\begin{nprop}
+Sea $n \in \N: \\
+a) \ $Los conjuntos abiertos cumplen las siguientes propiedades: \\
+ -\ \ \ \ $\varnothing, \R^n$ son abiertos \\
+- \ \ \ \ Si $A_1,...,A_n$ abiertos $\implies  \displaystyle\bigcap_{k=1}^{n}{A_k}$ abierto. \\
+-\ \ \ \ Si $\{A_{\alpha}: \alpha \in \land\} $ es una familia de abiertos $ \implies \displaystyle\bigcup_{\alpha \in \land}{A_\alpha}$ abierto. \\
+$b) $ \ Un conjunto $A \subseteq \R^n $ es abierto $ \Leftrightarrow \R^n/A$ es cerrado. \\
+$c) $ \ Los cerrados cumplen: \\
+- \ \ \ \ $\varnothing, \R^n$ son cerrados \\
+- \ \ \ \ Si $F_1,...,F_n$ cerrados $\implies  \displaystyle\bigcup_{k=1}^{n}{F_k}$ cerrado. \\
+-\ \ \ \ Si $\{F_{\alpha}: \alpha \in \land\} $ es una familia de cerrados $ \implies \displaystyle\bigcap_{\alpha \in \land}{F_\alpha}$ cerrado.
+\end{nprop}
+
+\begin{proof}.
+(Apartado b) \\ $\Rightarrow$ \\ Tomo $x \in \overline{\R^n/A} \implies \ \forall \epsilon > 0, \ B(x,\epsilon) \cap (\R^n/A) \ne \varnothing \implies B(x,\epsilon) \not\subseteq A \implies x \not\in \mathring{A} = A \implies x \in \R^n/A \implies \R^n$ es cerrado. \\
+$\Leftarrow \\ $Suponemos $\R^n/A$ cerrado y tomo $a \in A \implies a \not\in \R^n/A = \overline{\R^n/A} \implies \exists r > 0: B(a,r) \cap (\R^n/A) = \varnothing \implies B(a,r) \subseteq A \implies a \in \mathring{A} \implies A $ abierto.
+\end{proof}
+
+\begin{ndef}[Sucesión parcial]
+Sea $n \in \N, \ \{x_n\} \subseteq \R^n.$ Una sucesión parcial de $\{x_n\} $ es otra sucesión $\{x_{\sigma(n)}\}$ donde $\sigma: N \rightarrow N$ es creciente.
+\end{ndef}
+
+\begin{ndef}[Conjunto compacto]
+Sea $n \in \N, \ A \subseteq \R^n.$ Diremos que $A$ es compacto si $ \ \forall \{x_n\} \subseteq A, \ \exists \{x_{\sigma(n)}\} \rightarrow x \in A$.
+\end{ndef}
+
+
+
+
+
+
+
 % --------------------------------------------------------------------------------
 % Bibliografía.
 % --------------------------------------------------------------------------------
