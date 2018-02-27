@@ -428,10 +428,12 @@
 % Definiciones.
 \theoremstyle{definition-style}
 \newtheorem{ndef}{Definición}[section]
+\newtheorem{ejer}{Ejercicio}[section]
 
 % Notas.
 \theoremstyle{remark-style}
 \newtheorem*{nota}{Nota}
+\newtheorem*{sol}{Solución}
 
 % Ejemplos.
 \theoremstyle{example-style}
@@ -672,8 +674,56 @@ Sea $n \in \N, \ \{x_n\} \subseteq \R^n.$ Una sucesión parcial de $\{x_n\} $ es
 Sea $n \in \N, \ A \subseteq \R^n.$ Diremos que $A$ es compacto si $ \ \forall \{x_n\} \subseteq A, \ \exists \{x_{\sigma(n)}\} \rightarrow x \in A$.
 \end{ndef}
 
+\begin{nprop}
+Sea $n \in \N, \ A \subseteq \R^n$ compacto. Entonces A es cerrado y acotado.
+\end{nprop}
+
+\begin{proof}.
+\\ Demostremos que $A$ es cerrado. Tomo $x \in \overline{A}, $ hay que ver si $x \in A$. Como $x \in \overline{A} \implies \exists \{x_n\} \rightarrow x, \ \{x_n\} \in A.$ Como $A$ es compacto $ \implies \exists \{x_{\sigma(n)}\} \rightarrow a \in A.$ Por las propiedades de las sucesiones parciales, $\{x_{\sigma(n)}\} \rightarrow x \implies x = a \in A$ por unicidad de límites. Es decir, A es cerrado. \\ \\
+Demostremos que A es acotado. Supongamos, por reducción al absurdo, que $A$ no es acotado. Entonces $ \ \forall n \in \N \ \exists x_n \in A: ||x_n|| > M, \ M \in \N.$ Tenemos que $\{x_n\}$ no tiene parciales acotadas, luego no tiene parciales convergentes, en contradicción con la definición de compacidad. Es decir, A es acotado.
+\end{proof}
+
+\begin{nth}[Teorema de Bolzano-Weirstrass n-dimensional]
+Sea $n \in \N.$ Entonces, toda sucesión acotada admite una parcial convergente.
+\end{nth}
+
+\begin{proof}
+COMPLETAR MÁS ADELANTE
+\end{proof}
+
+\begin{nth}
+	Sea $n \in \N, \ A \subseteq \R^n$ cerrado y acotado. Entonces, A es compacto.
+\end{nth}
+
+\begin{proof}
+Tomo $ \{x_n\} \subseteq A.$ Como $A$ es acotado $ \implies \{x_n\}$ acotada.$ \implies \{x_n\}$ tiene una parcial convergente a $x \in \R^n.$ Como $x$ es límite de una sucesión de puntos de $A \implies x \in \overline{A} = A$ por ser $A$ cerrado $ \implies A$ es compacto.
+\end{proof}
+
+\begin{ejemplo}
+Dado $x \in \R^n, r > 0 \implies A = B(x,r)$ es compacto.
+\end{ejemplo}
+
+\begin{proof}
+	Veamos que la bola es cerrada y acotada. \\
+	$A$ es trivialmente acotado, pues $A \in \subseteq \overline{B}(0, ||x||+r).$ Demostremos que es cerrado. Sabemos que $A = \{y \in R^n: ||x-y|| \le r\}$, veamos que $ \R^n/A = \{y \in \R^n: ||x-y||>r\}$ es abierto. Para ver que es abierto, tomo $y \in \R^n/A$ y $ \{y_n\} \rightarrow y, \ y_n \in A$. Como $\{y_n\} \rightarrow y \implies \{y_n-x\} \rightarrow y - x \implies \{||y_n-x||\} \rightarrow ||y - x|| > r \implies \exists m: \forall n \ge m \implies ||y_n-x||>r \implies y_n \in \R^n/A \ \forall n \ge m \implies \R^n/A$ es abierto, luego $A$ es cerrado.
+\end{proof}
 
 
+
+
+
+
+\section{Ejercicios}
+
+\subsection{Relación $1$}
+
+\begin{ejer}
+Sea $A \subseteq R$ compacto. Entonces, $A$ tiene máximo y mínimo.
+\end{ejer}
+
+\begin{sol}
+	HACER
+\end{sol}
 
 
 
