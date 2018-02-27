@@ -649,16 +649,21 @@ $\Leftarrow \\ $ Sea $ \epsilon > 0, \{x_n\} \rightarrow x \implies \exists n \i
 \end{proof}
 
 \begin{nprop}
-Sea $n \in \N: \\
-a) \ $Los conjuntos abiertos cumplen las siguientes propiedades: \\
- -\ \ \ \ $\varnothing, \R^n$ son abiertos \\
-- \ \ \ \ Si $A_1,...,A_n$ abiertos $\implies  \displaystyle\bigcap_{k=1}^{n}{A_k}$ abierto. \\
--\ \ \ \ Si $\{A_{\alpha}: \alpha \in \land\} $ es una familia de abiertos $ \implies \displaystyle\bigcup_{\alpha \in \land}{A_\alpha}$ abierto. \\
+Sea $n \in \N$: \\
+
+$a)$ \ Los conjuntos abiertos cumplen las siguientes propiedades: \\
+ \begin{itemize}
+ 	\item $\varnothing, \R^n$ son abiertos \\
+	\item Si $A_1,...,A_n$ abiertos $\implies  \displaystyle\bigcap_{k=1}^{n}{A_k}$ abierto. \\
+	\item Si $\{A_{\alpha}: \alpha \in \land\} $ es una familia de abiertos $ \implies \displaystyle\bigcup_{\alpha \in \land}{A_\alpha}$ abierto. \\
+ \end{itemize}
 $b) $ \ Un conjunto $A \subseteq \R^n $ es abierto $ \Leftrightarrow \R^n/A$ es cerrado. \\
 $c) $ \ Los cerrados cumplen: \\
-- \ \ \ \ $\varnothing, \R^n$ son cerrados \\
-- \ \ \ \ Si $F_1,...,F_n$ cerrados $\implies  \displaystyle\bigcup_{k=1}^{n}{F_k}$ cerrado. \\
--\ \ \ \ Si $\{F_{\alpha}: \alpha \in \land\} $ es una familia de cerrados $ \implies \displaystyle\bigcap_{\alpha \in \land}{F_\alpha}$ cerrado.
+ \begin{itemize} 
+\item $\varnothing, \R^n$ son cerrados \\
+\item Si $F_1,...,F_n$ cerrados $\implies  \displaystyle\bigcup_{k=1}^{n}{F_k}$ cerrado. \\
+\item Si $\{F_{\alpha}: \alpha \in \land\} $ es una familia de cerrados $ \implies \displaystyle\bigcap_{\alpha \in \land}{F_\alpha}$ cerrado.
+ \end{itemize}
 \end{nprop}
 
 \begin{proof}.
@@ -705,7 +710,7 @@ Dado $x \in \R^n, r > 0 \implies A = B(x,r)$ es compacto.
 
 \begin{proof}
 	Veamos que la bola es cerrada y acotada. \\
-	$A$ es trivialmente acotado, pues $A \in \subseteq \overline{B}(0, ||x||+r).$ Demostremos que es cerrado. Sabemos que $A = \{y \in R^n: ||x-y|| \le r\}$, veamos que $ \R^n/A = \{y \in \R^n: ||x-y||>r\}$ es abierto. Para ver que es abierto, tomo $y \in \R^n/A$ y $ \{y_n\} \rightarrow y, \ y_n \in A$. Como $\{y_n\} \rightarrow y \implies \{y_n-x\} \rightarrow y - x \implies \{||y_n-x||\} \rightarrow ||y - x|| > r \implies \exists m: \forall n \ge m \implies ||y_n-x||>r \implies y_n \in \R^n/A \ \forall n \ge m \implies \R^n/A$ es abierto, luego $A$ es cerrado.
+	$A$ es trivialmente acotado, pues $A \subseteq \overline{B}(0, ||x||+r).$ Demostremos que es cerrado. Sabemos que $A = \{y \in R^n: ||x-y|| \le r\}$, veamos que $ \R^n/A = \{y \in \R^n: ||x-y||>r\}$ es abierto. Para ver que es abierto, tomo $y \in \R^n/A$ y $ \{y_n\} \rightarrow y, \ y_n \in A$. Como $\{y_n\} \rightarrow y \implies \{y_n-x\} \rightarrow y - x \implies \{||y_n-x||\} \rightarrow ||y - x|| > r \implies \exists m: \forall n \ge m \implies ||y_n-x||>r \implies y_n \in \R^n/A \ \forall n \ge m \implies \R^n/A$ es abierto, luego $A$ es cerrado.
 \end{proof}
 
 
