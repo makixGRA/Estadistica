@@ -723,6 +723,56 @@ Dado $x \in \R^n, r > 0 \implies A = B(x,r)$ es compacto.
 \subsection{Relación $1$}
 
 \begin{ejer}
+Sea $n \in \N$. Demostrar que dados $x,y \in \R^n$ se cumple que:
+$$ | \ \|x\| - \|y\| \ |  \le \|x-y\|$$
+\end{ejer}
+
+\begin{sol}.
+\\ $ ||x|| = ||x-y+y|| \le ||x-y||+||y||$ por la propiedad triangular $ \implies  ||x||-||y|| \le ||x-y||$. Esto es cierto para cualquier $x,y \in \R^n \implies ||y||-||x|| \le ||y-x|| = ||x-y|| $ \ (Fijarse que $||y||-||x||$ es el opuesto de $||x||-||y||$)$ \implies | \ \|x\| - \|y\| \ |  \le \|x-y\|$
+\end{sol}
+
+\begin{ejer}
+Sea $n \in \N$ y $x,y,z \in \R^n$. Demostrar que se cumple que:
+ \\ a) $d(x,y) \ge 0 \land d(x,y) = 0 \Leftrightarrow x = y.$ \\
+b) $d(x,y)=d(y,x) $
+ \\ c) $d(x,y) \le d(x,z)+d(z,y)$
+\end{ejer}
+
+\begin{sol}.
+\\ a) $ d(x,y) = \displaystyle{\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}} = \sqrt{<x-y,x-y>} \ge 0$ y la igualdad a 0 es trivial. \\
+b) $ d(x,y) = \displaystyle{\sqrt{\sum_{i=1}^{n}(x_i-y_i)^2}} = \displaystyle{\sqrt{\sum_{i=1}^{n}(y_i-x_i)^2}} = d(y,x)$ \\
+c) $ d(x,y)^2 = <x-y,x-y> = <x-z+z-y,x-z+z-y> = <x-z,x-z> + <z-y,z-y> + 2<x-z,z-y> \ \le \ <x-z,x-z> + <z-y,z-y> + 2\|x-z\| \|z-y\|$ por la desigualdad de Cauchy-Schwarz. $ \implies <x-z,x-z> + <z-y,z-y> + 2\|x-z\| \|z-y\| = d(x,z)^2+d(z,y)^2+2d(x,z)d(z,y) = (d(x,z)+d(z,y))^2.$ En definitiva, tenemos que $ d(x,y)^2 \le (d(x,z)+d(z,y))^2 \implies |d(x,y)| \le |d(x,z)+d(z,y)|$ y como las distancias son positivas $ \implies d(x,y) \le d(x,z)+d(z,y)$
+\end{sol}
+
+\begin{ejer}
+Sea $n \in \N$ y $x,y \in \R^n$. Demostrar que $ \|x+y\|^2 = \|x\|^2+\|y\|^2 \Leftrightarrow <x,y> = 0$
+\end{ejer}
+
+\begin{sol}.
+\\ $ \|x+y\|^2 = <x+y,x+y> = <x,x> + <y,y> + 2<x,y> \implies \|x\|^2+\|y\|^2 + 2<x,y> = \|x\|^2+\|y\|^2 \Leftrightarrow 2<x,y> = 0 \Leftrightarrow <x,y> = 0$
+\end{sol}
+
+\begin{ejer}
+Sea $n \in \N$ y $x,y \in \R^n$. \\
+a) Demostrar que existe un único $ \theta \in [0, \pi]$ de manera que: $$ cos(\theta) = \frac{<x,y>}{\|x\|\|y\|}$$ \ \ \ \ A este único $\theta$ lo llamaremos el ángulo entre $x$ e $y$ y lo denotaremos por $\theta(x, y)$. \\
+b) Demostrar la siguiente identidad: $$ \|x+y\|^2 = \|x\|^2+\|y\|^2 + 2 \|x\|\|y\|cos(\theta(x,y))$$
+\end{ejer}
+
+\begin{sol}.
+\\ a) Por la desigualdad de Cauchy-Schwarz, sabemos que $ |<x,y>| \le \|x\|\|y\| \implies \frac{|<x,y>|}{\|x\|\|y\|} \le 1 \implies -1 \le \frac{<x,y>}{\|x\|\|y\|} \le 1$, luego puede establecerse una aplicación biyectiva $ cos: [0,\pi] \rightarrow [-1,1]$ tal que $cos(\theta) = \frac{<x,y>}{\|x\|\|y\|}$ para $ \theta \in [0,\pi]$. \\
+b) $ \|x+y\|^2 = <x+y,x+y> = <x,x> + <y,y> + 2<x,y> = <x,x> + <y,y> + 2\|x\|\|y\|cos(\theta(x,y))$ \\
+\end{sol}
+
+\begin{ejer}
+Sea $n \in \N$ y $x \in \R^n, \{x_n\} \in \R^n$. Demostrar que $\{x_n\} \rightarrow x$ si, y sólamente si, todas las sucesiones parciales de $\{x_n\}$ convergen hacia $x$. 
+\end{ejer}
+
+\begin{sol}.
+\\ $\Leftarrow$ \\ Supongamos $ \sigma(n)=n \implies \{x_n\} $ es parcial de $ \{x_n\} \implies \{x_n\} \rightarrow x. \\
+ \Rightarrow \\ \forall \epsilon > 0, \ \exists m \in \N: n \ge m: ||x_n-x|| < \epsilon$. Si $n \ge m \implies \sigma(n) \ge m \implies \forall \epsilon > 0, \ \exists m \in \N: \sigma(n) \ge m: ||x_{\sigma(n)}-x|| < \epsilon$.
+\end{sol}
+
+\begin{ejer}
 Sea $A \subseteq R$ compacto. Entonces, $A$ tiene máximo y mínimo.
 \end{ejer}
 
