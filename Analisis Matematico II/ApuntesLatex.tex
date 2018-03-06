@@ -768,8 +768,8 @@ Sea $n \in \N$ y $x \in \R^n, \{x_n\} \in \R^n$. Demostrar que $\{x_n\} \rightar
 \end{ejer}
 
 \begin{sol}.
-\\ $\Leftarrow$ \\ Supongamos $ \sigma(n)=n \implies \{x_n\} $ es parcial de $ \{x_n\} \implies \{x_n\} \rightarrow x. \\
- \Rightarrow \\ \forall \epsilon > 0, \ \exists m \in \N: n \ge m: ||x_n-x|| < \epsilon$. Si $n \ge m \implies \sigma(n) \ge m \implies \forall \epsilon > 0, \ \exists m \in \N: \sigma(n) \ge m: ||x_{\sigma(n)}-x|| < \epsilon$.
+\\ $\boxed{\Leftarrow}$ \\ Supongamos $ \sigma(n)=n \implies \{x_n\} $ es parcial de $ \{x_n\} \implies \{x_n\} \rightarrow x. \\
+ \boxed{\Rightarrow} \\ \forall \epsilon > 0, \ \exists m \in \N: n \ge m: ||x_n-x|| < \epsilon$. Si $n \ge m \implies \sigma(n) \ge m \implies \forall \epsilon > 0, \ \exists m \in \N: \sigma(n) \ge m: ||x_{\sigma(n)}-x|| < \epsilon$.
 \end{sol}
 
 \begin{ejer}
@@ -787,9 +787,11 @@ Probariamos lo mismo para el mínimo, con un cambio adecuado de signo.
 Sea $n \in \N$ y $\{x_n\} \in \R^n$. Diremos que la
 sucesión $\{x_n\}$ es de Cauchy si dado $\epsilon > 0 \ \exists m \in \N$ de manera que: $$ p,q \ge m \implies \|x_p-x_q\| < \epsilon$$
 Demostrar: \\
-a) Las sucesiones de Cauchy están acotadas. \\
-b) Si $\{x_n\}$ es una sucesión de Cauchy y tiene una parcial $\{x_{\sigma(n)}\}$ convergente hacia un punto $x$, entonces $\{x_n\} \rightarrow x$. \\
-c) Una sucesión $\{x_n\} \in \R^n $ es de Cauchy si, y sólamente si, $\{x_n\}$ es convergente (Complitud de $R^n$).
+ \begin{nlist}
+\item a) Las sucesiones de Cauchy están acotadas. \\
+\item b) Si $\{x_n\}$ es una sucesión de Cauchy y tiene una parcial $\{x_{\sigma(n)}\}$ convergente hacia un punto $x$, entonces $\{x_n\} \rightarrow x$. \\
+\item c) Una sucesión $\{x_n\} \in \R^n $ es de Cauchy si, y sólamente si, $\{x_n\}$ es convergente (Complitud de $R^n$).
+\end{nlist}
 \end{ejer}
 
 \begin{sol}.
@@ -823,5 +825,3 @@ Sea $n \ge max\{n_0,n_1\} \implies \|x_n-x\| = \|x_n-x_{\sigma(n)}+x_{\sigma(n)}
 
 \end{document}
 
-NUEVOS APUNTES: PONER ABAJO
-hgfgfvgfhg
