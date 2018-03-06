@@ -776,8 +776,28 @@ Sea $n \in \N$ y $x \in \R^n, \{x_n\} \in \R^n$. Demostrar que $\{x_n\} \rightar
 Sea $A \subseteq R$ compacto. Entonces, $A$ tiene máximo y mínimo.
 \end{ejer}
 
-\begin{sol}
-	HACER
+\begin{sol}.
+\\ Como $A$ compacto, es cerrado y acotado, luego tiene supremo por ser acotado, es decir, $ \exists \alpha = sup A \in R \implies \ \forall \epsilon > 0 \ \exists a \in A: a > \alpha - \epsilon$. Sea $ n \in N, \epsilon = \frac{1}{n} \implies \exists a_n \in A: a_n > \alpha - \frac{1}{n} \implies \alpha - a_n < \frac{1}{n} \rightarrow 0 \implies lim a_n = \alpha. \\
+$Como $A$ es compacto, $ \exists a_{\sigma(n)} \rightarrow a \in A$, pero $a_{\sigma(n)}	$ converge a $\alpha$ por ser parcial de una convergente a $\alpha$, luego $\alpha = a$ por unicidad de límites $\implies \alpha \in A \implies \alpha = max A$.
+
+Probariamos lo mismo para el mínimo, con un cambio adecuado de signo.
+\end{sol}
+
+\begin{ejer}
+Sea $n \in \N$ y $\{x_n\} \in \R^n$. Diremos que la
+sucesión $\{x_n\}$ es de Cauchy si dado $\epsilon > 0 \ \exists m \in \N$ de manera que: $$ p,q \ge m \implies \|x_p-x_q\| < \epsilon$$
+Demostrar: \\
+a) Las sucesiones de Cauchy están acotadas. \\
+b) Si $\{x_n\}$ es una sucesión de Cauchy y tiene una parcial $\{x_{\sigma(n)}\}$ convergente hacia un punto $x$, entonces $\{x_n\} \rightarrow x$. \\
+c) Una sucesión $\{x_n\} \in \R^n $ es de Cauchy si, y sólamente si, $\{x_n\}$ es convergente (Complitud de $R^n$).
+\end{ejer}
+
+\begin{sol}.
+\\a) \ Sea $\epsilon = 1 \implies \exists n_0 \in \N: \|x_p-x_q\| < \epsilon \ \forall p,q \ge n_0.$ \\ Sea $ n, n_0 \ge n_0 \implies \|x_n-x_{n_0}\| < 1 \implies \{x_n: n \ge n_0\} \subseteq B(x_{n_0},1)$. \\ Sean $\alpha = sup \{\|x_n\|: n \ge n_0 \}, \beta = inf \{\|x_n\|: n \ge n_0 \}, M = max \{\|x_n\|: n < n_0 \}, m = inf \{\|x_n\|: n < n_0 \} \implies min \{\beta,m\} \le \|x_n\| \le max \{\alpha,M\} \implies \{x_n\} $ acotada. \\
+
+b) $x_n$ es de Cauchy $ \implies \ \forall \epsilon > 0 \ \exists n_0 \in \N: \|x_p-x_q\| < \frac{\epsilon}{2} \ \forall p,q \ge n_0$  \\
+$\{x_{\sigma(n)}\} \rightarrow x \implies \ \forall \epsilon > 0 \ \exists n_1 \in \N: \|x_{\sigma(n)}-x\| < \frac{\epsilon}{2} \ \forall n \ge n_1$. \\
+Sea $n \ge max\{n_0,n_1\} \implies \|x_n-x\| = \|x_n-x_{\sigma(n)}+x_{\sigma(n)}-x\| \le \|x_n-x_{\sigma(n)}\|+\|x_{\sigma(n)}-x\| < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \implies \{x_n\} \rightarrow x$
 \end{sol}
 
 
