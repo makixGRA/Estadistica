@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  6 MAR 2018 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  13 MAR 2018 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2458,74 +2458,187 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 707.
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 728.
+
+[8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 729.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 737.
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--743
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 747.
+
+Underfull \hbox (badness 10000) in paragraph at lines 756--759
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 763.
+[9]
+Package mdframed Info: Not enough space on this page on input line 765.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 773.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 781.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 789.
+
+Underfull \hbox (badness 10000) in paragraph at lines 798--800
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 804.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 808.
+[10]
+Package mdframed Info: Not enough space on this page on input line 810.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 812.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 816.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 825.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 829.
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--835
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 839.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 843.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 851.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 859.
+[11]
+Package mdframed Info: Not enough space on this page on input line 861.
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--865
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 869.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 877.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 877.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 877.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 879.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 883.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 723.
+(Font)              scaled to size 10.20007pt on input line 891.
 LaTeX Font Info:    Font shape `OML/cmbr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 723
+(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 891
 .
 LaTeX Font Info:    Font shape `OML/cmbr/m/it' in size <8.8> not available
-(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 723
+(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 891
 .
 LaTeX Font Info:    Font shape `OML/cmbr/m/it' in size <6.6> not available
-(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 723
+(Font)              Font shape `OML/cmbrm/m/it' tried instead on input line 891
 .
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 723.
+(hyperref)                removing `math shift' on input line 891.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 723.
+(hyperref)                removing `math shift' on input line 891.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 732.
+less on input line 907.
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 761--764
-
- []
-
-LaTeX Info: Redefining \. on input line 768.
-LaTeX Info: Redefining \% on input line 768.
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 788--790
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 929--932
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 791--792
+LaTeX Info: Redefining \. on input line 941.
+LaTeX Info: Redefining \% on input line 941.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 956--958
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
+Underfull \hbox (badness 10000) in paragraph at lines 959--960
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--799
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
-LaTeX Info: Redefining \. on input line 803.
-LaTeX Info: Redefining \% on input line 803.
-[10]
-LaTeX Info: Redefining \. on input line 811.
-LaTeX Info: Redefining \% on input line 811.
- [11]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 818.
+Underfull \hbox (badness 10000) in paragraph at lines 965--967
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--971
+
+ []
+
+LaTeX Info: Redefining \. on input line 975.
+LaTeX Info: Redefining \% on input line 975.
+[14]
+LaTeX Info: Redefining \. on input line 982.
+LaTeX Info: Redefining \% on input line 982.
+ [15]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 989.
 
 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 826.
+less on input line 997.
 
-[12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 826.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 826.
+[16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 997.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 997.
  (./ApuntesLatex.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
@@ -2534,10 +2647,10 @@ LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 826.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 826.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 997.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 997.
 Package rerunfilecheck Info: File `ApuntesLatex.out' has not changed.
-(rerunfilecheck)             Checksum: 3E27FB4E0DBE3ED81E531ACF1A6743BE;260.
+(rerunfilecheck)             Checksum: 4B091A121819910892792BA04500BD33;357.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2545,13 +2658,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 34501 strings out of 494891
- 650983 string characters out of 6179039
+ 34554 strings out of 494891
+ 651622 string characters out of 6179039
  749376 words of memory out of 5000000
- 36887 multiletter control sequences out of 15000+600000
- 171914 words of font info for 281 fonts, out of 8000000 for 9000
+ 36891 multiletter control sequences out of 15000+600000
+ 175378 words of font info for 296 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 50i,14n,67p,10401b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,14n,67p,10401b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/sha
 re/texlive/texmf-dist/fonts/enc/dvips/fira/fir_ekigrt.enc}{/usr/share/texlive/t
 exmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
@@ -2578,10 +2691,10 @@ re/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/newpx/zplri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 newpx/zplx-regular.pfb>
-Output written on ApuntesLatex.pdf (12 pages, 429169 bytes).
+Output written on ApuntesLatex.pdf (16 pages, 450666 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 37429 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 37445 words of extra memory for PDF output out of 42996 (max. 10000000)
 
