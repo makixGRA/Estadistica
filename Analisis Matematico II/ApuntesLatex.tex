@@ -915,7 +915,7 @@ Sean $n \in \N, A \subseteq \R^n, f:A \to \R^n$ y $x \in \R^n$. Diremos que $f$ 
 \end{nprop}
 
 \begin{nprop}
-	Sea $n,m \in \N, A \subseteq \R^n, f = (f_1,...,f_m):A \to R^n$. Entonces, dado $x \in A^{'}, \exists \lim_{y \to x} f(y) = (z_1,...,z_m) \Leftrightarrow \exists \lim_{y \to x} f_i(y) = z_i \ \forall i \in \{1,...,m\}$.
+	Sea $n,m \in \N, A \subseteq \R^n, f = (f_1,...,f_m):A \to R^m$. Entonces, dado $x \in A^{'}, \exists \lim_{y \to x} f(y) = (z_1,...,z_m) \Leftrightarrow \exists \lim_{y \to x} f_i(y) = z_i \ \forall i \in \{1,...,m\}$.
 \end{nprop}
 
 \begin{nprop}[Álgebra de límites]
@@ -1008,7 +1008,7 @@ Si $ \exists \lim_{(x,y) \to (0,0)}f(x,y) = L \implies$ \begin{itemize}
 
 \begin{proof}
 $\lim_{x \to 0}(\lim_{y \to 0}f(x,y)) = \lim_{x \to 0}0 = 0 = \lim_{y \to 0}(\lim_{x \to 0}f(x,y))$, luego si existe límite, es 0, pero no tiene por qué existir límite. Para averiguarlo, usamos acotaciones. \\
-$|f(x,y)| = |\frac{y^3}{x^2+y^2}| = |y\frac{y^2}{x^2+y^2}|=|y||\frac{y^2}{x^2+y^2}| \le |y|*1 = |y|$. Como $y \to 0 \implies f(0,0) \to 0 \implies \exists \lim_{(x,y) \to (0,0)}f(x,y) = 0$
+$|f(x,y)| = |\frac{y^3}{x^2+y^2}| = |y\frac{y^2}{x^2+y^2}|=|y||\frac{y^2}{x^2+y^2}| \le |y|*1 = |y|$. Como $y \to 0 \implies \exists \lim_{(x,y) \to (0,0)}f(x,y) = 0$
 \end{proof}
 
 \begin{nprop}[Criterio de las polares]
