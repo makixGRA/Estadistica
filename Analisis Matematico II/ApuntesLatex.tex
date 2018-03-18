@@ -876,13 +876,120 @@ Como $f(A)$ es conexo y $f(A) \subseteq \R \implies A$ es un intervalo.
 
 \section{Límites en $\R^n$}
 
-\begin{ndef}
+\begin{ndef}[Punto de acumulación]
 Sean $n \in \N, A \subseteq \R^n$ y $x \in \R^n$. Diremos que $x$ es un punto de acumulación de $A$ si $ \forall \epsilon > 0, (B(x,\epsilon)/\{x\}) \cap A \ne \varnothing$. Denotaremos por $A^{'} = \{x \in \R^n: x$ es punto de acumulación$\}$.
 \end{ndef}
 
-\begin{ndef}
+\begin{ndef}[Punto aislado]
 	Sean $n \in \N, A \subseteq \R^n$ y $x \in \R^n$. Diremos que $x$ es un punto aislado de $A$ si $ \exists \epsilon_0 > 0, (B(a,\epsilon)/\{a\}) \cap A == \varnothing$.  
 \end{ndef}
+
+\begin{ejemplo}
+$ A = [0,1[ \cup \{2\}$. \{2\} es aislado ya que $ ]2-\frac{1}{2},2+\frac{1}{2}[ \cap A = \{2\}$.
+\end{ejemplo}
+
+\begin{ejemplo}
+	$ A = B(0,1)/\{0\} \cup \{2\}$. \{0\} no es aislado ya que $ B(0,1)/\{0\} \cap A \ne \varnothing$.
+\end{ejemplo}
+
+\begin{nprop}
+Sea $n \in \N, A \subseteq \R^n$.
+
+\begin{itemize}
+	\item Un punto $x \in \R^n \in A^{'} \Leftrightarrow \exists \xn \to x : x_n \in A/\{x\} \ \forall n \in \N$.
+	\item Un punto $x \in \R^n \not\in A^{'} \Leftrightarrow \forall \xn \to x : x_n \in A/\{x\} \ \forall n \in \N \implies \exists m: n \ge m, x_n = x$.
+\end{itemize}
+\end{nprop}
+
+\begin{ndef}[Límite de una función]
+Sean $n \in \N, A \subseteq \R^n, f:A \to \R^n$ y $x \in \R^n$. Diremos que $f$ tiene límite en $x$ y vale $L$ si $ \forall \epsilon > 0 \ \exists \delta > 0: 0 < \|y-x\| < \delta, \delta \in A \implies \|f(y)-L\| < \epsilon$ y $L = \lim_{y \to x} f(y)$.
+\end{ndef}
+
+\begin{nprop}
+	Sean $n \in \N, A \subseteq \R^n, f:A \to \R^n$ y $x \in A^{'}$. Son equivalentes:
+	
+	\begin{itemize}
+		\item $f$ tiene límite en $x$ y es igual a $L$.
+		\item $\forall \xn \to x, x_n \in A/\{x\} \implies \{f(x_n)\} \to L$.
+	\end{itemize}
+\end{nprop}
+
+\begin{nprop}
+	Sea $n,m \in \N, A \subseteq \R^n, f = (f_1,...,f_m):A \to R^n$. Entonces, dado $x \in A^{'}, \exists \lim_{y \to x} f(y) = (z_1,...,z_m) \Leftrightarrow \exists \lim_{y \to x} f_i(y) = z_i \ \forall i \in \{1,...,m\}$.
+\end{nprop}
+
+\begin{nprop}[Álgebra de límites]
+	Sea $n \in \N, A \subseteq \R^n, f:A \to R, a \in \R^n$. 
+	\begin{itemize}
+		\item Si $\exists \lim_{x \to a} f(x), \lim_{x \to a} g(x) \implies \exists \lim_{x \to a} (f+g)(x) = \lim_{x \to a} f(x)+\lim_{x \to a} g(x)$.
+		\item Si $ \exists \lim_{x \to a} f(x) \implies \exists \lim_{x \to a} (\lambda f)(x) = \lambda \lim_{x \to a} f(x)$.
+		\item Si $ \exists \lim_{x \to a} f(x), \lim_{x \to a} g(x) \implies \exists \lim_{x \to a} (fg)(x) = \lim_{x \to a} f(x)*\lim_{x \to a} g(x)$.
+		\item Si $g(x) \ne 0 \ \forall x \in A$ y $ \exists \lim_{x \to a} g(x) \ne 0 \implies \exists \lim_{x \to a} \frac{1}{g(x)} = \frac{1}{\lim_{x \to a} g(x)}$.
+		\end{itemize}
+\end{nprop}
+
+\begin{nprop}[Límite vs Continuidad]
+	Sea $n,m \in \N, A \subseteq \R^n, f,g:A \to R^n, \lambda \in \R, a \in A^{'}$. 
+	\begin{itemize}
+		\item Si $ a \not\in A, a \not\in A^{'}$, entonces no tiene sentido hablar de límite en $a$.
+		\item Si $ a \not\in A, a \in A^{'}$, entonces no tiene sentido hablar de continuidad en $a$ pero sí de límite.
+		\item Si $ a \in A, a \not\in A^{'}$, entonces no tiene sentido hablar de límite en $a$ pero sí de continuidad.
+		\item Si $ a \in A, a \in A^{'}$, entonces tiene sentido hablar de límite y continuidad en $a \implies \exists \lim_{x \to a} f(x)=f(a) \Leftrightarrow f$ es continua en $a$.
+	\end{itemize}
+\end{nprop}
+
+\begin{nprop}
+	Sean $n \in \N, A \subseteq \R^n, f:A \to \R$ y $a \in A^{'}$. Sea $ \gamma:[0,1] \to \R^n$ continua tal que $ \gamma(]0,1[) \subseteq A, \gamma(0)=a$. Si $ \exists \lim_{x \to a}f(x) \implies \exists \lim_{t \to 0}(f$ o $\gamma)(t) = \lim_{x \to a}f(x)$.	
+\end{nprop}
+
+\begin{proof}.
+\\ Tomamos $\{t_n\} \to 0, t_n \in ]0,1]$. Como $ \gamma$ es continua $ \implies \{\gamma(t_n)\} \to a, \gamma(t_n) \in A/\{a\} \implies \{f(\gamma(t_n))\} \to \lim_{x \to a}f(x)$.
+\end{proof}
+
+\begin{ejemplo}
+Probar la continuidad de $ f: \R^2 \to \R, f(x,y) = \left\lbrace
+\begin{array}{ll}
+\frac{x^2-y^2}{x^2+y^2} : (x,y) \ne (0,0)\\
+0: (x,y) = (0,0)
+\end{array}
+\right.$
+\end{ejemplo}
+
+\begin{proof}
+$f$ es continua en $\R^2/\{0\}$. Probemos la continuidad en $(0,0)$. Sea $ \gamma:[0,1] \to \R^2, \gamma(t) = (t,0) \implies \lim_{t \to 0} f(t,0) = \lim_{t \to 0}\frac{t^2-0}{t^2+0}=1$. \\
+Por otra parte, sea $\gamma(t) = (0,t) \implies \lim_{t \to 0} f(0,t)=-1 \implies$ no existe límite en $(0,0)$.
+\end{proof}
+
+\begin{ejemplo}
+	Probar la continuidad de $ f: \R^2 \to \R, f(x,y) = \left\lbrace
+	\begin{array}{ll}
+	\frac{x^2+y^2}{x^4+y^2} : (x,y) \ne (0,0)\\
+	0: (x,y) = (0,0)
+	\end{array}
+	\right.$
+\end{ejemplo}
+
+\begin{proof}
+	$f$ es continua en $\R^2/\{0\}$. Probemos la continuidad en $(0,0)$. Sea $\gamma:[0,1] \to \R^2, \gamma(t) = (t,0) \implies \lim_{t \to 0} f(t,0) = \lim_{t \to 0}\frac{t^2}{t^4}= +\infty \implies \not\exists \lim_{(x,y) \to (0,0)} f(x,y)$.
+\end{proof}
+
+\begin{ejemplo}
+	Probar la continuidad de $ f: \R^2 \to \R, f(x,y) = \left\lbrace
+	\begin{array}{ll}
+	\frac{xy^2}{x^2+y^4} : (x,y) \ne (0,0)\\
+	0: (x,y) = (0,0)
+	\end{array}
+	\right.$
+\end{ejemplo}
+
+\begin{proof}
+	$f$ es continua en $\R^2/\{0\}$. Probemos la continuidad en $(0,0)$. Sea $\gamma:[0,1] \to \R^2 \implies \lim_{t \to 0} f(t,0) = 0 = \lim_{t \to 0} f(0,t)$. Sin embargo, $\lim_{t \to 0} f(t^2,t)= \frac{1}{2} \implies \not\exists \lim_{(x,y) \to (0,0)} f(x,y)$.
+\end{proof}
+
+
+
+
+
 
 
 
