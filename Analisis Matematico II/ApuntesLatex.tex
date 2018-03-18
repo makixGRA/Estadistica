@@ -986,7 +986,39 @@ Por otra parte, sea $\gamma(t) = (0,t) \implies \lim_{t \to 0} f(0,t)=-1 \implie
 	$f$ es continua en $\R^2/\{0\}$. Probemos la continuidad en $(0,0)$. Sea $\gamma:[0,1] \to \R^2 \implies \lim_{t \to 0} f(t,0) = 0 = \lim_{t \to 0} f(0,t)$. Sin embargo, $\lim_{t \to 0} f(t^2,t)= \frac{1}{2} \implies \not\exists \lim_{(x,y) \to (0,0)} f(x,y)$.
 \end{proof}
 
+\begin{ncor}
+Consideremos $f:\R^2 \to \R.$ Estudiamos $\lim_{(x,y) \to (a,b)}f(x,y)$. Podemos restringirnos al caso $(a,b)=(0,0)$ mediante una traslación. Sea $\phi:\R^2 \to \R, \phi(x,y) = (x+a,y+a) \implies \exists \lim_{(x,y) \to (0,0)}(f$ o $\phi)(x,y) \Leftrightarrow \lim_{(x,y) \to (a,b)}f(x,y).$
+\end{ncor}
 
+\begin{nprop}[Límites iterados]
+Si $ \exists \lim_{(x,y) \to (0,0)}f(x,y) = L \implies$ \begin{itemize}
+\item $\exists \displaystyle{\lim_{x \to 0}(\lim_{y \to 0}f(x,y))=L}$
+\item $\exists \displaystyle{\lim_{y \to 0}(\lim_{x \to 0}f(x,y))=L}$
+\end{itemize}
+\end{nprop}
+
+\begin{ejemplo}
+	$ f: \R^2 \to \R, f(x,y) = \left\lbrace
+	\begin{array}{ll}
+	\frac{y^3}{x^2+y^2} : (x,y) \ne (0,0)\\
+	0: (x,y) = (0,0)
+	\end{array}
+	\right.$
+\end{ejemplo}
+
+\begin{proof}
+$\lim_{x \to 0}(\lim_{y \to 0}f(x,y)) = \lim_{x \to 0}0 = 0 = \lim_{y \to 0}(\lim_{x \to 0}f(x,y))$, luego si existe límite, es 0, pero no tiene por qué existir límite. Para averiguarlo, usamos acotaciones. \\
+$|f(x,y)| = |\frac{y^3}{x^2+y^2}| = |y\frac{y^2}{x^2+y^2}|=|y||\frac{y^2}{x^2+y^2}| \le |y|*1 = |y|$. Como $y \to 0 \implies f(0,0) \to 0 \implies \exists \lim_{(x,y) \to (0,0)}f(x,y) = 0$
+\end{proof}
+
+\begin{nprop}[Criterio de las polares]
+Sea $ \phi:\R_0^{+}x]-\pi,\pi[ \to \R^2, \phi(\rho,\alpha) = (\rho(cos \alpha),\rho (sen \alpha)). \\ \phi $ es biyectiva, porque dado $(x,y) \in \R^2$, asociamos $ \rho = \|(x,y)\|, \alpha $= $\left\lbrace
+\begin{array}{ll}
+\pi : x = 0, y = 0 \\
+2$ arctg $(\frac{y}{\rho+x}) : \ $en otro caso$ \\
+\end{array}
+\right.$
+\end{nprop}
 
 
 
