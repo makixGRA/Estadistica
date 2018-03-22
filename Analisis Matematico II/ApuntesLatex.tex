@@ -1095,9 +1095,9 @@ Sea $n \in \N$ y $\{x_n\} \in \R^n$. Diremos que la
 sucesión $\{x_n\}$ es de Cauchy si dado $\epsilon > 0 \ \exists m \in \N$ de manera que: $$ p,q \ge m \implies \|x_p-x_q\| < \epsilon$$
 Demostrar: \\
  \begin{nlist}
-\item a) Las sucesiones de Cauchy están acotadas. \\
-\item b) Si $\{x_n\}$ es una sucesión de Cauchy y tiene una parcial $\{x_{\sigma(n)}\}$ convergente hacia un punto $x$, entonces $\{x_n\} \rightarrow x$. \\
-\item c) Una sucesión $\{x_n\} \in \R^n $ es de Cauchy si, y sólamente si, $\{x_n\}$ es convergente (Complitud de $R^n$).
+\item Las sucesiones de Cauchy están acotadas. \\
+\item Si $\{x_n\}$ es una sucesión de Cauchy y tiene una parcial $\{x_{\sigma(n)}\}$ convergente hacia un punto $x$, entonces $\{x_n\} \rightarrow x$. \\
+\item Una sucesión $\{x_n\} \in \R^n $ es de Cauchy si, y sólamente si, $\{x_n\}$ es convergente (Complitud de $R^n$).
 \end{nlist}
 \end{ejer}
 
@@ -1108,11 +1108,22 @@ b) $x_n$ es de Cauchy $ \implies \ \forall \epsilon > 0 \ \exists n_0 \in \N: \|
 $\{x_{\sigma(n)}\} \rightarrow x \implies \ \forall \epsilon > 0 \ \exists n_1 \in \N: \|x_{\sigma(n)}-x\| < \frac{\epsilon}{2} \ \forall n \ge n_1$. \\
 Sea $n \ge max\{n_0,n_1\} \implies \|x_n-x\| = \|x_n-x_{\sigma(n)}+x_{\sigma(n)}-x\| \le \|x_n-x_{\sigma(n)}\|+\|x_{\sigma(n)}-x\| < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \implies \{x_n\} \rightarrow x$ \\
 
-c) $\boxed{\Leftarrow} \\ \{x_n\}$ converge $ \implies \exists x: lim x_n = x \implies \forall \epsilon > 0 \ \exists n_0 \in \N: \|x_n-x\| < \frac{\epsilon}{2} \ \forall n \ge n_0$.\\ Por otra parte: $ \forall p,q \ge n_0 : ||x_p-x_q|| \le ||x_p-x||+||x-x_q|| < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \implies \{x_n\}$ es de Cauchy. \\
+c) $\boxed{\Leftarrow} \\ \{x_n\}$ converge $ \implies \exists x: \lim x_n = x \implies \forall \epsilon > 0 \ \exists n_0 \in \N: \|x_n-x\| < \frac{\epsilon}{2} \ \forall n \ge n_0$.\\ Por otra parte: $ \forall p,q \ge n_0 : ||x_p-x_q|| \le ||x_p-x||+||x-x_q|| < \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \implies \{x_n\}$ es de Cauchy. \\
 $\boxed{\Rightarrow} \\
 \{x_n\}$ es de Cauchy. Entonces es acotada (por el apartado a), luego admite una parcial convergente (por Bolzano-Weirstrass). Por el apartado b, la parcial converge al mismo punto que la principal.
 \end{sol}
 
+\begin{ejer}
+Sea $n \in \N, A \in \R^n, B \subseteq A$. Demostrar que:
+\begin{nlist}
+	\item Un punto $x \in B$ es interior relativo a $A$ si, y sólamente si, para toda sucesión $\xn$ de puntos de $A$ tal que $\xn \to x$ se tiene que existe $m \in \N$ de manera que $n \ge m \implies \xn \in B \ \forall n \ge m$.
+	\item Un punto $x \in A$ es adherente a $B$ relativo a $A$ si, y sólamente si, existe una sucesión $ \xn \in B$ de manera que $\xn \to a$.
+\end{nlist}
+\end{ejer}
+
+\begin{sol}.
+\\
+\end{sol}
 
 
 % --------------------------------------------------------------------------------

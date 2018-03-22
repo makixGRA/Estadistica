@@ -1,0 +1,27 @@
+﻿h1,h3,h4,h5,h6 {
+		font-family: Algerian;
+		color: #FF0000;
+		font-style: italic;
+		text-align: center;
+		text-decoration: underline;
+	}
+
+	p {
+		text-indent: 2em;
+	}
+
+	a {
+		color: #81982F;
+		text-decoration: none;
+		text-indent: 3em;
+	}
+
+	li li {
+		list-style-type: square;
+		color: #A9DBF6;
+	}
+
+	li {
+		list-style-type: circle;
+		
+	}

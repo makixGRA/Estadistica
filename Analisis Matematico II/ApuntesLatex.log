@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  18 MAR 2018 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  20 MAR 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2700,21 +2700,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1107--1110
 
  []
 
-LaTeX Info: Redefining \. on input line 1121.
-LaTeX Info: Redefining \% on input line 1121.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1126
+
+ []
+
+LaTeX Info: Redefining \. on input line 1132.
+LaTeX Info: Redefining \% on input line 1132.
 [17]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 1128.
+LaTeX Warning: Empty `thebibliography' environment on input line 1139.
 
 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 1136.
+less on input line 1147.
 
 [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1136.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1136.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1147.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1147.
  (./ApuntesLatex.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
@@ -2723,11 +2728,11 @@ LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1136.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1136.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1147.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1147.
 
 Package rerunfilecheck Info: File `ApuntesLatex.out' has not changed.
-(rerunfilecheck)             Checksum: 4B091A121819910892792BA04500BD33;357.
+(rerunfilecheck)             Checksum: A6A6BF390906625C459960A1E5FB57C6;357.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2735,8 +2740,8 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 34576 strings out of 494891
- 651856 string characters out of 6179039
+ 34579 strings out of 494891
+ 651876 string characters out of 6179039
  749398 words of memory out of 5000000
  36893 multiletter control sequences out of 15000+600000
  175493 words of font info for 297 fonts, out of 8000000 for 9000
@@ -2768,10 +2773,10 @@ re/texlive/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/newpx/zplr.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/newpx/zplri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 newpx/zplx-regular.pfb>
-Output written on ApuntesLatex.pdf (18 pages, 464491 bytes).
+Output written on ApuntesLatex.pdf (18 pages, 465198 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 94 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 97 named destinations out of 1000 (max. 500000)
  37445 words of extra memory for PDF output out of 42996 (max. 10000000)
 
