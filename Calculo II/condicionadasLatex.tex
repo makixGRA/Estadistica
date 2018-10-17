@@ -85,7 +85,6 @@
 
 % Diseño de página.
 \usepackage{fancyhdr}   % Utilizado para hacer cabeceras y pies de página.
-\usepackage{multirow}
 
 \usepackage{titlesec} 	% Utilizado para hacer títulos propios.
 \usepackage{lastpage}   % Referencia a la última página.
@@ -459,7 +458,7 @@
 % ---------------------------------------------------------------------------
 
 % Título del documento.
-\newcommand{\subject}{Cálculo II: ejercicio extra}
+\newcommand{\subject}{Cálculo de funciones de densidad condicionadas de vectores aleatorios}
 
 % Autor del documento.
 \newcommand{\docauthor}{Miguel Anguita Ruiz}
@@ -502,51 +501,68 @@
 % Introducción.
 % --------------------------------------------------------------------------------
 
-\section{Relación 1}
+\section{Ejercicios}
 
-\begin{ejer}.
-\\
-
-En esta práctica, se pide calcular la función de distribución del vector aleatorio $(X_1,X_2)$ con función masa de probabilidad dada en la tabla asociada a tu número de DNI/pasaporte. \\ Sea mi DNI = 77149477, la tabla asociada es la siguiente:  
+DNI: 77149477W
 
 
-Por lo tanto, la función de distribución del vector aleatorio es:
-
-\begin{equation}
-F(x_1,x_2) = \left\lbrace
-\begin{array}{ll}
-0 : x_1 < 1 \lor x_2 < -5\\
-\frac{1}{2} : 1 \le x_1 < 2, -5 \le x_2 < 2\\
-\frac{5}{8} : 1 \le x_1 < 2, x_2 \ge 2 \\
-\frac{3}{4} : 2 \le x_1 < 6, -5 \le x_2 < 2 \\
-\frac{7}{8} : 2 \le x_1 < 6, x_2 \ge 2 \\
-\frac{13}{16} : x_1 \ge 6, -5 \le x_2 < 2 \\
-1 : x_1 \ge 6, x_2 \ge 2 \\
-\end{array}
-\right.
-\end{equation}
-
-
+\begin{ejer}
+	Sea (X,Y) un vector aleatorio continuo con la función de densidad conjunta que se muestra a continuación:
 	
+	$$ f(x,y)= \frac{4}{289}, \ \ y < x < 1-y, \ \ -8 < y < 0.5$$
 	
-	
-	
-	
-
+	Obtener la función de densidad de $y$ condicionada a un valor $x_0$ , así como la función de densidad de $x$ condicionada a un valor $y_0$. A través de esas funciones de densidad condicionadas, calcular $P(Y > -3.38|X=3.81)$ y $P(X<3.81|Y=-3.38)$.
 \end{ejer}
 
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{sol}.
+	
+	$$\includegraphics{foto22}$$
+	
+	 Calculo primero la función de densidad marginal de X:
+	 
+	 \begin{equation}
+	 f_1(x) = \left\lbrace
+	 \begin{array}{ll}
+	 \displaystyle\int_{-8}^{x} \frac{4}{289} \ dy = \frac{4}{289} \displaystyle\int_{-8}^{x} 1 \ dy = \frac{4}{289}(x+8) = \frac{4}{289}x+\frac{32}{289}, \ \ -8 < x < 0.5 \\ 
+	 \displaystyle\int_{-8}^{1-x} \frac{4}{289} \ dy = \frac{4}{289} \displaystyle\int_{-8}^{1-x} 1 \ dy = \frac{4}{289}(9-x) = \frac{36}{289}-\frac{4}{289}x, \ \ 0.5 \leq x < 9 \\ 
+	 \end{array}
+	 \right. 
+	 \end{equation}
+	
+	Por otra parte, calculo la función de densidad de Y:
+	
+	\begin{equation}
+	f_2(y) = \displaystyle\int_{y}^{1-y} \frac{4}{289} \ dx = \frac{4}{289} \displaystyle\int_{y}^{1-y} 1 \ dx = \frac{4}{289}(1-2y) = \frac{4}{289}-\frac{8}{289}y, \ \ -8 < y < 0.5
+	\end{equation}
+	
+	Calculo ahora las densidades condicionadas a ciertos valores $x_0, y_0$.
+	
+	\begin{equation}
+	f_{Y/X=x_0}(y/x_0)= \frac{f(x_0,y)}{f_X(x_0)} = \left\lbrace
+	\begin{array}{ll}
+	\frac{\frac{4}{289}}{\frac{4x_0+32}{289}}= \frac{4}{4x_0+32} = \frac{1}{x_0+8}, \ \ -8 < x_0 < 0.5 \\ 
+	\frac{\frac{4}{289}}{\frac{36-4x_0}{289}}= \frac{4}{36-4x_0} = \frac{1}{9-x_0}, \ \ 0.5 \leq x_0 < 9 \\ 
+	\end{array}
+	\ \ -8 < y < 0.5
+	\right.
+	\end{equation} 
+	
+	\begin{equation}
+	f_{X/Y=y_0}(x/y_0)= \frac{f(x,y_0)}{f_Y(y_0)} = 
+	\frac{\frac{4}{289}}{\frac{4-8y_0}{289}}= \frac{4}{4-8y_0} = \frac{1}{1-2y_0}, \ \ -8 < y_0 < 0.5, \ -8 < x < 9 \\ 
+	\end{equation} 
+	
+	Finalmente, calculamos las probabilidades condicionadas deseadas:
+	
+	\begin{equation}
+	P(Y > -3.38|X = 3.81) = \displaystyle\int_{-3.38}^{+\infty} f_{Y/X=3.81}(y) \ dy = \displaystyle\int_{-3.38}^{1-x} \frac{1}{9-3.81} dy = \displaystyle\int_{-3.38}^{-2.81} \frac{1}{5.19} dy =  \frac{1}{5.19}(-2.81+3.38) = 0.1098
+	\end{equation}
+	
+	\begin{equation}
+	P(X < 3.81|Y = -3.38) = \displaystyle\int_{-\infty}^{3.81} f_{X/Y=-3.38}(x) \ dx = \displaystyle\int_{y}^{3.81} \frac{1}{1-2*(-3.38)} dx = \displaystyle\int_{-3.38}^{3.81} \frac{1}{7.76} dx = \frac{1}{7.76}(3.81+3.38) = 0.927
+	\end{equation}
+	
+\end{sol}
 
 
 % FIN DEL DOCUMENTO

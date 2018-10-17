@@ -459,7 +459,7 @@
 % ---------------------------------------------------------------------------
 
 % Título del documento.
-\newcommand{\subject}{Cálculo II: ejercicio extra}
+\newcommand{\subject}{Prácticas de ordenador: distribuciones discretas y continuas unidimensionales}
 
 % Autor del documento.
 \newcommand{\docauthor}{Miguel Anguita Ruiz}
@@ -502,39 +502,251 @@
 % Introducción.
 % --------------------------------------------------------------------------------
 
-\section{Relación 1}
+\section{Práctica 1}
 
 \begin{ejer}.
 \\
 
-En esta práctica, se pide calcular la función de distribución del vector aleatorio $(X_1,X_2)$ con función masa de probabilidad dada en la tabla asociada a tu número de DNI/pasaporte. \\ Sea mi DNI = 77149477, la tabla asociada es la siguiente:  
+Calcular, para cada una de las distribuciones especificadas en las filas, los valores de probabilidades, percentiles y rango intercuartílico solicitados en las columnas de las siguientes tablas. \\ Sea mi DNI = 77149477, la tabla asociada es la siguiente:  
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline
+			 & P(X=1) & P(X $ \le$ 2) & P(X > 2) & Percentiles 0.05, 0.1, 0.65 & Rango intercuartílico \\
+			\hline \hline
+			B(5,0.3) & 0.36015 & 0.83692 & 0.16308 & (0,0,2) & 1 \\ \hline
+			P(1.5) & 0.3346952 & 0.8088468 & 0.1911532 & (0,0,2) & 1 \\ \hline
+			BN(4,0.3) & 0.02268 & 0.07047 & 0.92953 & (2,3,11) & 7\\ \hline
+			G(0.5) & 0.25 & 0.875 & 0.125 & (0,0,1) & 1\\ \hline
+			H(11,3,5) & 0.4545455 & 0.9393939 & 0.06060606 & (0,0,2) & 1\\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline
+			& $f(4.3)$ & P(X $ \le$ 5.3) & P(X > 1) & Percentiles 0.25, 0.5, 0.55 & Rango intercuartílico \\
+			\hline \hline
+			N(4.4,1.4) & 0.3359657 & 0.7765636 & 0.9979704 & (3.601933,4.4,5.198067) & 1.596134 \\ \hline
+			Exp(0.85) & 0.007474152 & 0.9980409 & 0.3083652 & (0.2445298,0.5891751,0.6787315) & 0.9338204 \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline
+			& $f(0.35)$ & P(X $ \le$ 0.95) & P(X > 0.7) & Percentiles 0.25, 0.5, 0.55 & Rango intercuartílico \\
+			\hline \hline
+			$\Gamma(1.9,1.1)$ & 0.2453359 & 0.2405288 & 0.8453424 & (0.9771061,1.736963,1.913223) & 1.846206 \\ \hline
+			Be(1.9,1.1) & 0.8139028 & 0.928102 & 0.4529392 & (0.4565206,0.6659588,0.7020887) & 0.3800205 \\ \hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Los comandos en R usados han sido los siguientes:
+
+\begin{enumerate}
+	\item Para B(5,0.3):
+			\begin{itemize}
+				\item dbinom(1,5,0.3)
+				
+				\item pbinom(2,5,0.3)
+				
+				\item pbinom(2,5,0.3,lower.tail = F)
+				
+				\item qbinom(0.05,5,0.3)
+				
+				\item qbinom(0.1,5,0.3)
+				
+				\item qbinom(0.65,5,0.3)
+				
+				\item qbinom(0.75,5,0.3)-qbinom(0.25,5,0.3)
+			\end{itemize}
+	\item Para P(1.5):
+	\begin{itemize}
+		\item dpois(1,1.5)
+		
+		\item ppois(2,1.5)
+		
+		\item ppois(2,1.5,lower.tail = F)
+		
+		\item qpois(0.05,1.5)
+		
+		\item qpois(0.1,1.5)
+		
+		\item qpois(0.65,1.5)
+		
+		\item qpois(0.75,1.5)-qpois(0.25,1.5)
+	\end{itemize}
+	\item Para BN(4,0.3):
+	\begin{itemize}
+		\item dnbinom(1,4,0.3)
+		
+		\item pnbinom(2,4,0.3)
+		
+		\item pnbinom(2,4,0.3,lower.tail = F)
+		
+		\item qnbinom(0.05,4,0.3)
+		
+		\item qnbinom(0.1,4,0.3)
+		
+		\item qnbinom(0.65,4,0.3)
+		
+		\item qnbinom(0.75,4,0.3)-qnbinom(0.25,4,0.3)
+	\end{itemize}
+	\item Para G(0.5):
+	\begin{itemize}
+		\item dgeom(1,0.5)
+		
+		\item pgeom(2,0.5)
+		
+		\item pgeom(2,0.5,lower.tail = F)
+		
+		\item qgeom(0.05,0.5)
+		
+		\item qgeom(0.1,0.5)
+		
+		\item qgeom(0.65,0.5)
+		
+		\item qgeom(0.75,0.5)-qgeom(0.25,0.5)
+	\end{itemize}
+	\item Para H(11,3,5):
+	\begin{itemize}
+	
+		\item dhyper(1,5,6,3)
+	
+		\item phyper(2,5,6,3)
+	
+		\item phyper(2,5,6,3, lower.tail = F)
+	
+		\item qhyper(0.05,5,6,3)
+	
+		\item qhyper(0.1,5,6,3)
+	
+		\item qhyper(0.65,5,6,3)
+	
+		\item qhyper(0.75,5,6,3)-qhyper(0.25,5,6,3) 
+	\end{itemize}
+	\item Para N(4.4,1.4):
+	\begin{itemize}
+		\item dnorm(4.3,mean=4.4,sd=sqrt(1.4))
+		
+		\item pnorm(5.3,mean=4.4,sd=sqrt(1.4))
+		
+		\item pnorm(1,mean=4.4,sd=sqrt(1.4),lower.tail = F)
+		
+		\item qnorm(0.25,mean=4.4,sd=sqrt(1.4))
+		
+		\item qnorm(0.5,mean=4.4,sd=sqrt(1.4))
+		
+		\item qnorm(0.55,mean=4.4,sd=sqrt(1.4))
+		
+		\item qnorm(0.75,mean=4.4,sd=sqrt(1.4))-qnorm(0.25,mean=4.4,sd=sqrt(1.4))
+	\end{itemize}
+	\item Para Exp(0.85):
+		\begin{itemize}
+			\item dexp(4.3,1/0.85)
+			
+			\item pexp(5.3,1/0.85)
+			
+			\item pexp(1,1/0.85,lower.tail = F)
+			
+			\item qexp(0.25,1/0.85)
+			
+			\item qexp(0.5,1/0.85)
+			
+			\item qexp(0.55,1/0.85)
+			
+			\item qexp(0.75,1/0.85)-qexp(0.25,1/0.85)
+		\end{itemize}
+	\item Para $\Gamma(1.9,1.1)$:
+		\begin{itemize}
+			\item dgamma(0.35,shape=1.9,scale=1.1)
+			
+			\item pgamma(0.95,shape=1.9,scale=1.1)
+			
+			\item pgamma(0.7,shape=1.9,scale=1.1,lower.tail = F)
+			
+			\item qgamma(0.25,shape=1.9,scale=1.1)
+			
+			\item qgamma(0.5,shape=1.9,scale=1.1)
+			
+			\item qgamma(0.55,shape=1.9,scale=1.1)
+			
+			\item qgamma(0.75,shape=1.9,scale=1.1)-qgamma(0.25,shape=1.9,scale=1.1)
+		\end{itemize}
+		\item Para Be(1.9,1.1):
+		\begin{itemize}
+			\item dbeta(0.35,shape1 = 1.9,shape2 = 1.1)
+			
+			\item pbeta(0.95,shape1 = 1.9,shape2 = 1.1)
+			
+			\item pbeta(0.7,shape1 = 1.9,shape2 = 1.1,lower.tail = F)
+			
+			\item qbeta(0.25,shape1 = 1.9,shape2 = 1.1)
+			
+			\item qbeta(0.5,shape1 = 1.9,shape2 = 1.1)
+			
+			\item qbeta(0.55,shape1 = 1.9,shape2 = 1.1)
+			
+			\item qbeta(0.75,shape1 = 1.9,shape2 = 1.1)-qbeta(0.25,shape1 = 1.9,shape2 = 1.1) \\ 
+		\end{itemize}
+	
+\end{enumerate}
 
 
-Por lo tanto, la función de distribución del vector aleatorio es:
 
-\begin{equation}
-F(x_1,x_2) = \left\lbrace
-\begin{array}{ll}
-0 : x_1 < 1 \lor x_2 < -5\\
-\frac{1}{2} : 1 \le x_1 < 2, -5 \le x_2 < 2\\
-\frac{5}{8} : 1 \le x_1 < 2, x_2 \ge 2 \\
-\frac{3}{4} : 2 \le x_1 < 6, -5 \le x_2 < 2 \\
-\frac{7}{8} : 2 \le x_1 < 6, x_2 \ge 2 \\
-\frac{13}{16} : x_1 \ge 6, -5 \le x_2 < 2 \\
-1 : x_1 \ge 6, x_2 \ge 2 \\
-\end{array}
-\right.
-\end{equation}
-
-
-	
-	
-	
-	
-	
 
 \end{ejer}
 
+\begin{ejer}
+
+Representa gráficamente la función de densidad y la función de distribución de una distribución Normal de media 10 y desviación típica 4, personaliza los gráficos a tu gusto y añádelos al documento a entregar.
+
+\begin{sol}
+	
+.\\
+
+Las funciones de densidad y distribución de una distribución normal de media 10 y desviación típica 4, son, respectivamente, las siguientes:
+	
+\includegraphics[]{FDensidad.jpg}
+
+\includegraphics[]{FDistribucion.jpg}
+El código usado ha sido el siguiente:
+
+\begin{enumerate}
+	\item Para la función de densidad:
+		\begin{itemize}
+			\item local(\{\ \\
+				.x <- seq(-3.162, 23.162, length.out=1000)  
+				plotDistr(.x, dnorm(.x, mean=10, sd=4), cdf=FALSE, xlab="x", ylab="Función de densidad", 
+				main=paste("Distribución Normal:  Media=10, Desviación típica=4")) \\
+			\}\ )
+		\end{itemize}
+	\item Para la función de distribución:
+		\begin{itemize}
+			\item local(\{\
+				.x <- seq(-3.162, 23.162, length.out=1000)  
+				plotDistr(.x, pnorm(.x, mean=10, sd=4), cdf=TRUE, xlab="x", ylab="Función de distribución", 
+				main=paste("Distribución Normal:  Media=10, Desviación típica=4")) \\
+			\}\ )
+		\end{itemize}
+\end{enumerate}
+ 
+	
+	
+	
+	
+	
+	
+	
+
+\end{sol}
 
 
 
@@ -543,11 +755,7 @@ F(x_1,x_2) = \left\lbrace
 
 
 
-
-
-
-
-
+\end{ejer}
 
 % FIN DEL DOCUMENTO
 % ---------------------------------------------------------------------------
